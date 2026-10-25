@@ -33,3 +33,7 @@ Route::get('/products/{id}', function ($id) {
 
 
 Route::get('/courses/{courseId}/students', [CourseController::class, 'students']);
+
+Route::get('/students/{id}/edit', function ($id) {
+    return 'Edit Student: ' . $id;
+});

@@ -57,4 +57,11 @@ class StudentRoutesTest extends TestCase
         $this->get('/products/abc')
             ->assertStatus(404);
     }
+
+    public function test_student_edit(): void
+    {
+        $this->get('/students/5/edit')
+            ->assertStatus(200)
+            ->assertSee('Edit Student: 5');
+    }
 }
